@@ -1,89 +1,113 @@
-# 10People 官方网站
+# 10People Official Website
 
-这是 10People 的官方网站，展示极简的"平安确认"与"意念连接"应用的功能和特性。
+The official website for **10People** — a minimalist "safety check" and "mind connection" app.
 
-## 产品信息
+## Product Information
 
-- **产品代号**: 10People
-- **Slogan**: The world is noisy, I just want to hear your heartbeat.
-- **核心价值**: Minimalist "safety check" and "mind connection"
+- **Product Name**: 10People
+- **Slogan**: The world is loud, I just want to hear your heartbeat.
+- **Core Value**: Minimalist "safety check" and "mind connection"
 
-## 网站结构
+## Website Structure
 
 ```
 website/
-├── index.html          # 主页
-├── privacy.html        # 隐私政策
-├── terms.html          # 用户协议
-├── styles.css          # 样式文件
-├── script.js           # JavaScript功能
+├── index.html          # Homepage
+├── styles.css          # Stylesheets
+├── script.js           # JavaScript functionality
 ├── assets/
 │   └── icon/
-│       └── app_icon.png # 应用图标
-└── README.md           # 说明文档
+│       └── app_icon.png # App icon
+└── README.md           # Documentation
 ```
 
-## 功能特性
+## Core Features
 
-### 主页 (index.html)
-- 响应式设计，支持移动端和桌面端
-- 产品介绍和核心功能展示
-- 核心功能：每天一次点亮、Widget 2.0、唯一沟通方式（戳一下）
-- 病毒式传播：只有10张"船票"的稀缺性营销
-- 下载链接
-- 现代化UI设计
+### Homepage (index.html)
+- Responsive design for mobile and desktop
+- Product introduction and core features
+- Core interactions: Daily light up, Widget 2.0, The Nudge
+- Viral growth: Only 10 "tickets" for scarcity marketing
+- Download links for App Store and Google Play
+- Modern UI with smooth animations
 
-### 核心功能
-1. **Light Up Once a Day**: 单击点亮或长按输入简短文字
-2. **Widget 2.0: The Window**: 桌面小组件显示10个格子
-3. **Nudge: The Only Communication**: 唯一的沟通方式，没有聊天框
-4. **Only 10 Spots**: 稀缺性设计，只有10个位置
-5. **Anti-Social Design**: 反社交设计，无历史记录，无时间戳
-6. **Invite-Only Connection**: 通过邀请码链接绑定关系
+### Core Philosophy
+1. **The 10 Rings**: Only 10 spots for the most important people
+2. **Daily Light Up**: Tap to glow, long press to share a short status (under 20 characters)
+3. **Widget 2.0: The Window**: View your circle without opening the app
+4. **The Nudge**: The only communication method — no chat boxes
+5. **Anti-Social by Design**: No history, no precise timestamps, resets at midnight
+6. **10 Rare Tickets**: Invite-only connections through unique links
 
-### 隐私政策 (privacy.html)
-- 详细的数据收集和使用说明
-- 用户权利和保护措施
-- 本地存储和云端同步说明
-- 联系方式和投诉渠道
+## Technical Features
 
-### 用户协议 (terms.html)
-- 服务使用条款和条件
-- 知识产权说明
-- 付费服务条款
-- 责任限制和争议解决
+- **Responsive Design**: Adapts to all screen sizes
+- **Modern CSS**: Flexbox and Grid layouts
+- **Smooth Animations**: CSS transitions and JavaScript interactions
+- **SEO Optimized**: Semantic HTML and meta tags
+- **Performance**: Optimized images and code
 
-## 技术特点
+## Deployment to GitHub Pages
 
-- **响应式设计**: 适配各种屏幕尺寸
-- **现代CSS**: 使用Flexbox和Grid布局
-- **平滑动画**: CSS过渡和JavaScript交互
-- **SEO优化**: 语义化HTML和meta标签
-- **性能优化**: 压缩图片和优化代码
+### Method 1: Using GitHub Pages Settings (Recommended)
 
-## 部署说明
+1. Push the website folder to your GitHub repository
+2. Go to repository Settings → Pages
+3. Under "Build and deployment", select:
+   - Source: "Deploy from a branch"
+   - Branch: `main`
+   - Folder: `/website` (or root if you move contents to root)
+4. Click "Save"
+5. Your site will be live at: `https://visionwise-nick.github.io/10People/`
 
-### GitHub Pages部署
+### Method 2: Using GitHub Actions (Advanced)
 
-1. 将website文件夹内容推送到GitHub仓库
-2. 在GitHub仓库设置中启用Pages功能
-3. 选择"Deploy from a branch"，选择main分支，选择/website文件夹（或根目录）
-4. 网站将自动部署到 `https://visionwise-nick.github.io/10People/`
+Create `.github/workflows/deploy.yml` for automatic deployment on push.
 
-### 本地开发
+### Method 3: Using Subtree Push
 
-1. 克隆仓库到本地
-2. 进入website目录
-3. 使用本地服务器运行（如Python的`python -m http.server 8000`）
-4. 在浏览器中访问 `http://localhost:8000`
+```bash
+# Push only the website folder to gh-pages branch
+git subtree push --prefix website origin gh-pages
+```
 
-## 自定义配置
+## Local Development
 
-### 修改联系信息
-在以下文件中更新联系信息：
-- `privacy.html` - 隐私政策联系信息
-- `terms.html` - 用户协议联系信息
-- `index.html` - 页脚联系信息
+1. Clone the repository
+2. Navigate to the website directory
+3. Start a local server:
+   ```bash
+   # Python 3
+   python -m http.server 8000
+   
+   # Python 2
+   python -m SimpleHTTPServer 8000
+   
+   # Node.js (with http-server installed)
+   npx http-server -p 8000
+   ```
+4. Open `http://localhost:8000` in your browser
 
-### 更新下载链接
-在`index.html`的下载区域更新各平台的应用商店链接。
+## Customization
+
+### Update Contact Information
+Update contact details in:
+- `index.html` - Footer section
+
+### Update Download Links
+Modify the App Store and Google Play links in the Download section of `index.html`.
+
+### Change Colors and Styling
+Edit `styles.css` to customize the color scheme and design elements.
+
+## Browser Compatibility
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## License
+
+© 2026 10People. All rights reserved.
